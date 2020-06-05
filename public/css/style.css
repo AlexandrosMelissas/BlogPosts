@@ -1,0 +1,220 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+}
+
+.navigation {
+    height: 10vh;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    
+}
+
+.navigation_list {
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+
+}
+
+.navigation_item {
+
+    list-style: none;
+
+}
+
+.navigation_item:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+.navigation_link {
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+
+}
+
+.navigation_link:hover {
+    border-bottom: .15rem solid white;
+    padding-bottom: .5rem;
+}
+
+/* FORMS */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10vh;
+    padding: 0 2rem;
+}
+
+.form {
+    padding: 2rem 2rem;
+    width: 25%;
+    margin-bottom: 2rem;
+    background-color: #e0d8d8 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-heading {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+}
+
+.form-group:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.form-input {
+    height: 2rem;
+    padding: .5rem .5rem;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: .3rem;
+}
+
+.invalid {
+    border: 1px solid #ee2e2e!important;
+}
+
+.invalid-message {
+    font-size: .9rem;
+    display: inline-block;
+    color: red;
+    margin-top: .3rem;
+}
+
+.form-label {
+    position: absolute;
+    top: -1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.form-submit {
+    display: inline-block;
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #ece6e6;
+    background-color: teal;
+    cursor: pointer;
+}
+
+/* POSTS SECTION */
+
+.posts {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.post {
+    padding: 2rem 2rem;
+    border-radius: .3rem;
+    background-color: #c2bbbb;
+    color: #222121;
+    margin-bottom: 2rem;
+}
+
+.post_author {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.single-post {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.post_createdat {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.post_body {
+    font-size: 1.1rem;
+    padding: 1.5rem 0;
+}
+
+.post_button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    width: 12rem;
+    font-size: 1.3rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.post_button-read {
+    color: #b6d8e4;
+    background-color: teal;
+}   
+
+.post_button-delete {
+    color: white;
+    background-color: #ac2121;
+}
+
+.post_button-edit {
+    color: white;
+    background-color: orangered;
+}
+
+
+/*  EDIT POST SECTION */
+
+.edit_form {
+    display: block;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.edit_heading {
+    margin-bottom: 1rem;
+}
+
+.edit_body {
+    height: 20rem;
+    margin-bottom: 2rem;
+}
