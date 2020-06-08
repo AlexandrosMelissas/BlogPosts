@@ -48,12 +48,12 @@
                 $this->pagination = new Pagination;
                 $posts = $this->postModel->getAllPosts();
                 $number_of_posts = $this->postModel->getPostsCount();
-                $data =  $this->pagination->paginate($current_page,$number_of_posts,$posts);
+                $data =  $this->pagination->paginate(1,$number_of_posts,$posts);
                 $total_pages = $this->pagination->getTotalPages($number_of_posts);
                 $data = [
                     'data' => $data,
                     'total_pages' => $total_pages,
-                    'current_page' => $current_page
+                    'current_page' => 1
                 ];
                 $this->view('posts/all',$data);
                 redirect('posts/all');
@@ -78,12 +78,12 @@
                     $this->pagination = new Pagination;
                     $posts = $this->postModel->getAllPosts();
                     $number_of_posts = $this->postModel->getPostsCount();
-                    $data =  $this->pagination->paginate($current_page,$number_of_posts,$posts);
+                    $data =  $this->pagination->paginate(1,$number_of_posts,$posts);
                     $total_pages = $this->pagination->getTotalPages($number_of_posts);
                     $data = [
                         'data' => $data,
                         'total_pages' => $total_pages,
-                        'current_page' => $current_page
+                        'current_page' => 1
                     ];
                     $this->view('posts/all',$data);
                     redirect('posts/all'); 
