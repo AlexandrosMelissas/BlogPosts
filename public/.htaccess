@@ -2,7 +2,7 @@
     Options -Multiviews
     
     RewriteEngine On
-    RewriteBase /home/student/it/2015/it154582/public_html/BlogPosts/public
+    RewriteBase /public/
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
