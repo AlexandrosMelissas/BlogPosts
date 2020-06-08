@@ -1,10 +1,10 @@
 <?php
 
        // DB Config
-       define('DBHOST','127.0.0.1');
+       define('DBHOST','localhost');
        define('DBNAME', 'blogposts');
        define('DBUSER', 'root');
-       define('DBPASS','');
+       define('DBPASS','root');
    
        // App Root
        define('APPROOT',dirname(dirname(__FILE__)));
