@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/includes/header.php'; ?>
 
-<div class="section">
+<div class="center">
         <form action="<?php echo URLROOT; ?>/users/register" method="POST" class="form">
         <div class="form-group">
         <h2 class="form-heading">Sign up</h2>

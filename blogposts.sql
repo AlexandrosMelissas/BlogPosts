@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 05 Ιουν 2020 στις 20:25:13
+-- Χρόνος δημιουργίας: 08 Ιουν 2020 στις 16:54:47
 -- Έκδοση διακομιστή: 10.4.11-MariaDB
 -- Έκδοση PHP: 7.4.3
 
@@ -19,8 +19,48 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `new_project`
+-- Βάση δεδομένων: `blogposts`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `body` text NOT NULL,
+  `author_id` int(11) NOT NULL,
+  `topic_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `image` varchar(255) NOT NULL DEFAULT 'http://localhost/php/public/img/post_image.jpg'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `topics`
+--
+
+CREATE TABLE `topics` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `topics`
+--
+
+INSERT INTO `topics` (`id`, `name`) VALUES
+(1, 'Writing'),
+(2, 'Painting'),
+(3, 'Drawing'),
+(4, 'Music'),
+(5, 'Motivation'),
+(6, 'Inspiration'),
+(7, 'Life-Lessons');
 
 -- --------------------------------------------------------
 
@@ -37,19 +77,20 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Άδειασμα δεδομένων του πίνακα `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
-(1, 'Alex', 'melissasla@gmail.com', 'alex1997', '2020-06-01 16:35:12'),
-(2, 'Alex', 'gatopardosgr@hotmail.com', '$2y$10$mseZzFJAJYMKBjQaPIaKReGmtVO4xalIu9hl8e8sGO6oShfXp3gN2', '2020-06-01 19:51:37'),
-(3, 'Alex', 'gatopardos@hotmail.com', '$2y$10$oxZWcQC6shAStHsaj7ZzuOFeUzDo1vekKheSmjZ9XlYqYgRLDnV46', '2020-06-01 19:52:30'),
-(4, 'Alex', 'gatopardoes@hotmail.com', '$2y$10$iJYFj6tTDsG9tpx04FEnhuM1moLk8XPn14WPIacUs1ub2pbQ9Gm7W', '2020-06-01 19:53:08'),
-(5, 'qpwkdqwd', 'qwpdokqwod@gmail.com', '$2y$10$4Qt8eLCBdnIDp8IoOuuJpesx9ItNLrD9rFEntYkWwm5WElvXsE8R6', '2020-06-01 20:01:12');
-
---
 -- Ευρετήρια για άχρηστους πίνακες
 --
+
+--
+-- Ευρετήρια για πίνακα `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Ευρετήρια για πίνακα `topics`
+--
+ALTER TABLE `topics`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Ευρετήρια για πίνακα `users`
@@ -60,6 +101,18 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT για άχρηστους πίνακες
 --
+
+--
+-- AUTO_INCREMENT για πίνακα `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
+--
+-- AUTO_INCREMENT για πίνακα `topics`
+--
+ALTER TABLE `topics`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT για πίνακα `users`

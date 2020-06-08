@@ -2,7 +2,7 @@
 
        // DB Config
        define('DBHOST','localhost');
-       define('DBNAME', 'new_project');
+       define('DBNAME', 'blogposts');
        define('DBUSER', 'root');
        define('DBPASS','');
    
@@ -10,6 +10,6 @@
        define('APPROOT',dirname(dirname(__FILE__)));
    
        // Public ROOT
-       define('URLROOT','https://powerful-tor-98459.herokuapp.com');
+       define('URLROOT','http://localhost/php');
 
   
