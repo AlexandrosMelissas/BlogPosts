@@ -3,6 +3,7 @@
     class Database {
 
         private $host = DBHOST;
+        private $socket = DBSOCKET;
         private $user = DBUSER;
         private $pass = DBPASS;
         private $dbname = DBNAME;
@@ -13,7 +14,7 @@
 
 
         public function __construct() {
-            $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+            $dsn = 'mysql:unix_socket=' . $this->socket . ';dbname=' . $this->dbname;
             $options = array(
                 // Pesistent connection,checks if there is a connection already
                 PDO::ATTR_PERSISTENT => true, 
