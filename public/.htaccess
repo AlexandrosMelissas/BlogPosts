@@ -1,7 +1,15 @@
     Options -Multiviews
+
+<Limit GET POST PUT OPTIONS>
+Require all granted
+</Limit>
+<LimitExcept GET POST PUT OPTIONS>
+Require all denied
+</LimitExcept>
     
     RewriteEngine On
+    RewriteBase /public
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.+)$ /public/index.php?url=$1 [QSA,L]
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
