@@ -13,7 +13,7 @@
        echo(APPROOT);
    
        // Public ROOT
-       define('URLROOT','https://users.iee.ihu.gr/~it154582/BlogPosts');
+       define('URLROOT','/home/student/it/2015/it154582/public_html/BlogPosts/public');
 
        echo(URLROOT);
 
