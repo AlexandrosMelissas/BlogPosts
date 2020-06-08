@@ -1,9 +1,3 @@
-<Files .htaccess>
-order allow,deny
-deny from all
-</Files>
-
-<IfModule mod_rewrite.c>
     Options -Multiviews
     
     RewriteEngine On
@@ -12,4 +6,3 @@ deny from all
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
-</IfModule>
