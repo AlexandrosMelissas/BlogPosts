@@ -10,6 +10,6 @@
        define('APPROOT',dirname(dirname(__FILE__)));
    
        // Public ROOT
-       define('URLROOT','http://users.iee.ihu.gr/~it154582/BlogPosts');
+       define('URLROOT','https://users.iee.ihu.gr/~it154582/BlogPosts');
 
   
