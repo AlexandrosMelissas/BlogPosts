@@ -45,7 +45,16 @@
         public function delete($id) {
             $deletedPost = $this->postModel->deletePost($id);
             if($deletedPost) {
-                $data =  $this->postModel->getPosts();
+                $this->pagination = new Pagination;
+                $posts = $this->postModel->getAllPosts();
+                $number_of_posts = $this->postModel->getPostsCount();
+                $data =  $this->pagination->paginate($current_page,$number_of_posts,$posts);
+                $total_pages = $this->pagination->getTotalPages($number_of_posts);
+                $data = [
+                    'data' => $data,
+                    'total_pages' => $total_pages,
+                    'current_page' => $current_page
+                ];
                 $this->view('posts/all',$data);
                 redirect('posts/all');
   
@@ -66,7 +75,16 @@
                 $editedPost = $this->postModel->editPost($id,$title,$body);
 
                 if($editedPost) {
-                    $data =  $this->postModel->getPosts();
+                    $this->pagination = new Pagination;
+                    $posts = $this->postModel->getAllPosts();
+                    $number_of_posts = $this->postModel->getPostsCount();
+                    $data =  $this->pagination->paginate($current_page,$number_of_posts,$posts);
+                    $total_pages = $this->pagination->getTotalPages($number_of_posts);
+                    $data = [
+                        'data' => $data,
+                        'total_pages' => $total_pages,
+                        'current_page' => $current_page
+                    ];
                     $this->view('posts/all',$data);
                     redirect('posts/all'); 
                 } else {
