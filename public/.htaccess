@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
     Options -Multiviews
     RewriteEngine On
-    DirectoryIndex index.php
+    DirectoryIndex /public/index.php
     RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
