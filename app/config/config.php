@@ -9,8 +9,12 @@
    
        // App Root
        define('APPROOT',dirname(dirname(__FILE__)));
+
+       echo(APPROOT);
    
        // Public ROOT
        define('URLROOT','https://users.iee.ihu.gr/~it154582/BlogPosts');
+
+       echo(URLROOT);
 
   
