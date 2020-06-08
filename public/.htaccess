@@ -7,9 +7,9 @@ deny from all
     Options -Multiviews
     
     RewriteEngine On
-    RewriteBase /
+    RewriteBase /public
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
 </IfModule>
