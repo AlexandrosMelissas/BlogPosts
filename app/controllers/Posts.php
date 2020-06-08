@@ -55,13 +55,14 @@
                     'total_pages' => $total_pages,
                     'current_page' => 1
                 ];
-                $this->view('posts/all',$data);
                 redirect('posts/all');
+                $this->view('posts/all',$data);
+             
   
             } else {
                 $data = $this->postModel->getPost($id);
-                $this->view('posts/one',$data);
                 redirect('posts/one');
+                $this->view('posts/one',$data);
             }
         }
 
@@ -85,8 +86,8 @@
                         'total_pages' => $total_pages,
                         'current_page' => 1
                     ];
-                    $this->view('posts/all',$data);
                     redirect('posts/all'); 
+                    $this->view('posts/all',$data);
                 } else {
                     $data = $this->postModel->getPost($id);
                     $this->view('posts/edit',$data);
