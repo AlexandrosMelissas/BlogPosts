@@ -65,7 +65,7 @@
            
             if($filename) {
                 $this->db->query('INSERT into posts (author_id,title,body,topic_id,image) VALUES (:author_id,:title,:body,:topic_id,:image) ');
-                $this->db->bind(':image','http://localhost/php/public/img/' . $filename );
+                $this->db->bind(':image', URLROOT . '/public/img' . $filename );
             } else {
                 $this->db->query('INSERT into posts (author_id,title,body,topic_id) VALUES (:author_id,:title,:body,:topic_id) ');
             }
