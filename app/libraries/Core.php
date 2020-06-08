@@ -14,6 +14,7 @@ class Core {
        
         $url = $this->getUrl();
         // Check for first url parameter
+        echo $url;
 
         if($url){
                // Look for first value
