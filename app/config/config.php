@@ -2,7 +2,7 @@
 
        // DB Config
        define('DBHOST','localhost');
-       define('DBNAME', 'blogposts');
+       define('DBNAME', 'blogposts_db');
        define('DBUSER', 'root');
        define('DBPASS','root');
    
