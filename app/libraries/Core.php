@@ -14,8 +14,7 @@ class Core {
        
         $url = $this->getUrl();
         // Check for first url parameter
-        echo $url;
-
+        
         if($url){
                // Look for first value
             if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
