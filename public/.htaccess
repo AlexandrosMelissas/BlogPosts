@@ -8,7 +8,7 @@ Require all denied
 </LimitExcept>
     
     RewriteEngine On
-    RewriteBase /public
+    RewriteBase /home/student/it/2015/it154582/publi_html/BlogPosts/public
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
