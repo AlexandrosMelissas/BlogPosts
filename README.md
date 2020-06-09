@@ -1,5 +1,5 @@
 # BlogPosts
-A simple PHP Object Oriented CRUD Application
+A simple PHP Object Oriented MVC CRUD Application
 
 # Link 
 
@@ -7,7 +7,7 @@ https://users.iee.ihu.gr/~it154582/BlogPosts
 
 # Technologies Used
 
-1. Vanilla PHP with OOP mindset for reusability and scalability
+1. Vanilla PHP with OOP mindset for reusability and scalability with MVC
 2. HTML & CSS
 
 # Features
